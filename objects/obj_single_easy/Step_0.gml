@@ -16,7 +16,7 @@ if (global.healths = 0) {
 	room_goto(Title_screen)
 }
 
-if (cuenum == 7) {
+if (cuenum == 10) {
 	global.swipedown = false;
 	global.swipeup = false;
 	global.swipeleft = false;
