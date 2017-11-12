@@ -1,4 +1,5 @@
-audio_play_sound(snd_ani_dog, 0, 0)
+cuescore = 90;
+audio_play_sound(snd_ani_dog, 0, 0);
 if (global.cue_cooldown < 0 and global.collide == (global.roundnum)) {
 alarm[0] = 90;
 }else{
