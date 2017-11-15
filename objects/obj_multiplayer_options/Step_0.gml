@@ -1,4 +1,4 @@
-/// @description Step thru MP options menu
+/// @description Step thru SP options menu
 
 var move = 0;
 
@@ -20,7 +20,7 @@ push = max(keyboard_check_released(vk_enter), 0);
 
 // README: This is probably a good way to squeeze all of our audio playback code
 // for organizations' sake
-if (push==1) scr_sp_options();
+if (push==1) scr_mp_options();
 
 
 

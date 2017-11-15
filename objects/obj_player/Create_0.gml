@@ -1,3 +1,3 @@
-thescore = 0;
-healths = 
-max_health = 3;
+p1score = 0;
+global.p1correct = false;
+

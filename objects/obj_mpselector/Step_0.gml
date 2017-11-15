@@ -1,5 +1,5 @@
 /// @description check rounds and modify data structures accordingly
-if (instance_exists(obj_single_easy)) {
+/*if (instance_exists(obj_single_easy)) {
 	if(global.roundnum == 1) {
 		// The first round introduces three new cues
 		// stores top three unused cues in used cues list
@@ -24,4 +24,4 @@ if (instance_exists(obj_single_easy)) {
 		
 	}
 }
-		
+	*/

@@ -1,6 +1,6 @@
 /// @description Decreases health and score
 
-if (object_exists(obj_dog)) {
+if (object_exists(obj_snake)) {
 	audio_play_sound(snd_incorrect, 0, 0);
 	global.healths -= 1;
 	global.thescore -= 90;

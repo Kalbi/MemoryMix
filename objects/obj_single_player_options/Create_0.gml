@@ -3,15 +3,15 @@
 // 
 
 // More tries, less new cues intro per round
-menu[0] = "Begin Easy Difficulty";
+menu[0] = "Easy Mode";
 
 // Standard difficulty
-menu[1] = "Begin Medium Difficulty";
+menu[1] = "Medium Mode";
 
 // Less tries, more new cues per round
-menu[2] = "Begin Hard Difficulty";
+menu[2] = "Hard Mode";
 
-space = 64;
+space = 100;
 mpos = 0;
 
 // option variables
