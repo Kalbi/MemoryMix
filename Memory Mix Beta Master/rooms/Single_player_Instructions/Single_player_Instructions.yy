@@ -1,6 +1,6 @@
 
 {
-    "name": "Instructions",
+    "name": "Single_player_Instructions",
     "id": "1f754e4a-61a5-43fe-9f02-52d1bf4c6d4a",
     "creationCodeFile": "",
     "inheritCode": false,

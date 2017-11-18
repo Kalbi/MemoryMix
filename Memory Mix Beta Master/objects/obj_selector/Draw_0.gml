@@ -7,4 +7,3 @@ draw_set_font(fnt_title)
 
 draw_text(50, 100, string("Score: ") + string(global.thescore));
 
-draw_text(50, 300, string("Global.num is ") +string(global.num));
