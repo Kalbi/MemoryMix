@@ -34,7 +34,7 @@ if (move != 0) {
 	}
 	case 3: { //instructions
 		audio_pause_sound(snd_gameintro);
-		audio_play_sound(snd_instructions, 0, 0);
+		
 		break;
 	}
 	

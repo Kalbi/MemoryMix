@@ -98,7 +98,7 @@
             "Key": "0bb8aeeb-cde2-4a16-903b-9312704b8013",
             "Value": {
                 "id": "8ff79f74-6e46-481b-b611-9ad5f380d89d",
-                "resourcePath": "objects\\obj_horse\\obj_horse.yy",
+                "resourcePath": "objects\\obj_ani_horse\\obj_ani_horse.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -140,6 +140,14 @@
                 "id": "3d4b4231-e186-447c-98d4-3d6a1234ef21",
                 "resourcePath": "scripts\/scr_mp_options\/scr_mp_options.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "14f0fd89-a130-484e-ab02-c9ca5d1fb590",
+            "Value": {
+                "id": "183a2236-ac3c-4278-ab6a-dd8f06c94f2a",
+                "resourcePath": "sprites\\sprt_drum\\sprt_drum.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -255,6 +263,14 @@
             }
         },
         {
+            "Key": "2e0d3bdf-e86e-404e-86ec-b3c14feaa11e",
+            "Value": {
+                "id": "858494a3-71f6-4daf-b0bc-687fd7ef0216",
+                "resourcePath": "objects\\obj_ins_drum\\obj_ins_drum.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2ed19db0-db5c-463f-9b42-bc08c01d0ab7",
             "Value": {
                 "id": "f29ed6f0-66fd-49d5-86d0-ff07315aaa50",
@@ -299,6 +315,14 @@
             "Value": {
                 "id": "f3124132-d99a-4835-8021-d7f50bfa44a8",
                 "resourcePath": "sprites\/sprt_snake\/sprt_snake.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "35e85c6c-c4b1-4c46-8138-14c24ed1b55c",
+            "Value": {
+                "id": "f13cf2a9-5481-40a5-bfbb-33b26da16e46",
+                "resourcePath": "sprites\\sprt_sax\\sprt_sax.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -362,7 +386,7 @@
             "Key": "4167bbe2-6355-443a-a88f-016ea7184342",
             "Value": {
                 "id": "97ded5f1-0b08-438d-b62e-279082f02802",
-                "resourcePath": "objects\\obj_chicken\\obj_chicken.yy",
+                "resourcePath": "objects\\obj_ani_chicken\\obj_ani_chicken.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -407,6 +431,14 @@
             }
         },
         {
+            "Key": "4afcad85-1a1b-45ae-b224-d490fe3a6076",
+            "Value": {
+                "id": "bbe0df23-e407-4e5d-b9ed-35eea75e20a9",
+                "resourcePath": "objects\\obj_ins_trumpet\\obj_ins_trumpet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4b3196c0-6aff-4d92-9e12-679b7114c708",
             "Value": {
                 "id": "817c0dff-cc7b-4161-b7fa-c50fffa06641",
@@ -428,6 +460,14 @@
                 "id": "a3a96a0a-c9e4-4590-b7d6-356d7bf2e775",
                 "resourcePath": "sounds\/snd_ani_bird\/snd_ani_bird.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "4d29d48e-1084-4b00-ae79-189e8ec27e49",
+            "Value": {
+                "id": "de872375-6cdb-4be2-9d3c-c2b1b3fa7aee",
+                "resourcePath": "sprites\\sprt_clarinet\\sprt_clarinet.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -458,7 +498,7 @@
             "Key": "4fc81475-2327-4cad-81c9-764afdf3cd92",
             "Value": {
                 "id": "a9b11688-0d7e-4f7e-b0f4-3fb05f387c55",
-                "resourcePath": "objects\\obj_bird\\obj_bird.yy",
+                "resourcePath": "objects\\obj_ani_bird\\obj_ani_bird.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -514,7 +554,7 @@
             "Key": "57973963-907f-47a9-9081-987a8fda1bf8",
             "Value": {
                 "id": "09ddc040-bbe6-4d5d-8795-228d6650a85a",
-                "resourcePath": "objects\\obj_rooster\\obj_rooster.yy",
+                "resourcePath": "objects\\obj_ani_rooster\\obj_ani_rooster.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -706,7 +746,7 @@
             "Key": "72bc625d-8684-48a9-b762-556b7467793f",
             "Value": {
                 "id": "3f060621-b7ac-4003-a9b9-002a0bb986b9",
-                "resourcePath": "objects\\obj_pig\\obj_pig.yy",
+                "resourcePath": "objects\\obj_ani_pig\\obj_ani_pig.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -716,6 +756,14 @@
                 "id": "3fb78f40-b0d7-41ce-9ac6-aa23e9de241c",
                 "resourcePath": "sounds\/snd_instructions4\/snd_instructions4.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "755d9b46-7a5b-45af-80fc-9685bb86da48",
+            "Value": {
+                "id": "0501cdd4-8d67-4a11-823d-cbbaf4e86241",
+                "resourcePath": "sprites\\sprt_ins_piano\\sprt_ins_piano.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -746,7 +794,7 @@
             "Key": "7a5597ac-7ee1-4aa7-a404-eab89f5d8166",
             "Value": {
                 "id": "ed5621fa-d3e3-4d1b-b749-dc63e8481e4f",
-                "resourcePath": "objects\\obj_elephant\\obj_elephant.yy",
+                "resourcePath": "objects\\obj_ani_elephant\\obj_ani_elephant.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -754,7 +802,7 @@
             "Key": "7ac97949-c0e2-42e5-b974-dea694a2ff7d",
             "Value": {
                 "id": "b5fc3be7-5b8d-435b-b2c9-84b2aa82ec4b",
-                "resourcePath": "objects\\obj_dog\\obj_dog.yy",
+                "resourcePath": "objects\\obj_ani_dog\\obj_ani_dog.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1015,11 +1063,35 @@
             }
         },
         {
+            "Key": "a4cde556-5c88-4469-bafc-91e1043ef256",
+            "Value": {
+                "id": "511f62ca-e812-4be9-ba92-248bd5a36aef",
+                "resourcePath": "objects\\obj_ins_violin\\obj_ins_violin.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a5a3ded4-3fe7-4870-949d-7d6c2fc99a38",
             "Value": {
                 "id": "c1b8e625-1588-4d15-9548-0e6b40bce104",
                 "resourcePath": "objects\\obj_single_hard\\obj_single_hard.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a66e8a06-88e3-4ada-996c-19b80b28ed14",
+            "Value": {
+                "id": "0d6a38ed-0ef4-4373-a95e-8f25dc6be99f",
+                "resourcePath": "objects\\obj_ins_sax\\obj_ins_sax.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a6ff1d0e-87c4-4b62-bd82-1833595c8d8b",
+            "Value": {
+                "id": "4b0cbdfb-5427-4c38-93a5-efcf3a9b25f0",
+                "resourcePath": "sprites\\sprt_guitar\\sprt_guitar.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1042,7 +1114,7 @@
             "Key": "a98d94ab-19c4-4482-92e5-0717f880f057",
             "Value": {
                 "id": "c5b1c825-ee70-45b5-9d6f-650b3ac99cc8",
-                "resourcePath": "objects\\obj_cat\\obj_cat.yy",
+                "resourcePath": "objects\\obj_ani_cat\\obj_ani_cat.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1087,10 +1159,26 @@
             }
         },
         {
+            "Key": "afc0c5f2-b647-417f-8e76-0049ad961f9a",
+            "Value": {
+                "id": "5d0b8f3b-496d-4a66-9502-7d11d7f4a193",
+                "resourcePath": "objects\\obj_ins_guitar\\obj_ins_guitar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b113f8c7-c009-4bb8-a73d-baa6e18284f0",
             "Value": {
                 "id": "560bb033-3635-4308-89ba-356f01eecdcf",
                 "resourcePath": "sprites\/sprt_follow\/sprt_follow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b297dbb5-cacb-4874-a30c-7be1d6177437",
+            "Value": {
+                "id": "a7d7dc95-20f5-402b-b08e-7502da7d81e8",
+                "resourcePath": "sprites\\sprt_ins_violin\\sprt_ins_violin.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1100,6 +1188,14 @@
                 "id": "bf60a2fc-117c-429d-a6d4-e99521f7670b",
                 "resourcePath": "scripts\/scr_round_intro_single_hard\/scr_round_intro_single_hard.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b4e28703-1301-49e3-9251-0b7704b07d38",
+            "Value": {
+                "id": "ba579d0f-fec0-4f5b-8b68-775aeb217614",
+                "resourcePath": "objects\\obj_ins_harp\\obj_ins_harp.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1154,7 +1250,7 @@
             "Key": "b895c3d6-8c0c-4c2d-a55d-422e19ef63d5",
             "Value": {
                 "id": "ddb0a00f-cfd7-47db-8e90-5cb063e1dc1a",
-                "resourcePath": "objects\\obj_sheep\\obj_sheep.yy",
+                "resourcePath": "objects\\obj_ani_sheep\\obj_ani_sheep.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1274,7 +1370,7 @@
             "Key": "c640cbb1-f4aa-4af2-b6a7-8afc8bdcce0a",
             "Value": {
                 "id": "26bbac87-a091-41f0-b0e0-a033753e47ff",
-                "resourcePath": "objects\\obj_frog\\obj_frog.yy",
+                "resourcePath": "objects\\obj_ani_frog\\obj_ani_frog.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1292,6 +1388,14 @@
                 "id": "17bdbbc6-64f6-41b7-a5a5-8bd48c3a584e",
                 "resourcePath": "views\/c87326df-ffb1-49df-9f8d-b3ecd0f39af5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c9d4692a-60f4-466a-8b4e-99f688f87afc",
+            "Value": {
+                "id": "c63a2552-599a-46ea-a769-8aac5b2ebf87",
+                "resourcePath": "objects\\obj_ins_clarinet\\obj_ins_clarinet.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1399,10 +1503,26 @@
             }
         },
         {
+            "Key": "d27ce59e-76e7-4d35-b5da-706efada5fd3",
+            "Value": {
+                "id": "faf21502-7dce-4ce5-a90d-510aa11be4e5",
+                "resourcePath": "sprites\\sprt_ins_trumpet\\sprt_ins_trumpet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d352f47e-a151-4e6a-b1bc-be0debda0636",
+            "Value": {
+                "id": "23375c8b-36b3-41bb-a8fe-9a6900bf837c",
+                "resourcePath": "sprites\\sprt_ins_harp\\sprt_ins_harp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d4227af4-3d86-4837-970a-375fe18af6b2",
             "Value": {
                 "id": "cc61a0fa-2139-415d-8e4b-fa2686601394",
-                "resourcePath": "objects\\obj_lion\\obj_lion.yy",
+                "resourcePath": "objects\\obj_ani_lion\\obj_ani_lion.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1539,6 +1659,14 @@
             "Value": {
                 "id": "edf4c00b-dbdb-49c7-8bea-ac37589d6a91",
                 "resourcePath": "objects\\obj_single_medium\\obj_single_medium.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e02ed90a-b2b4-4863-b7c1-0452ee7cb875",
+            "Value": {
+                "id": "e678c45d-d4e6-4da8-8ef7-3519f00e631b",
+                "resourcePath": "objects\\obj_ins_piano\\obj_ins_piano.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1698,7 +1826,7 @@
             "Key": "f6b5b06f-2858-4826-bbe4-7f790ff0d323",
             "Value": {
                 "id": "e7e0719a-08ff-4ed2-a63c-3029b79de260",
-                "resourcePath": "objects\/obj_snake\/obj_snake.yy",
+                "resourcePath": "objects\\obj_ani_snake\\obj_ani_snake.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1706,7 +1834,7 @@
             "Key": "f772d094-2326-495d-bf3b-c221f1725506",
             "Value": {
                 "id": "0569c1e1-417e-45dd-a2e1-479ae7229115",
-                "resourcePath": "objects\\obj_cow\\obj_cow.yy",
+                "resourcePath": "objects\\obj_ani_cow\\obj_ani_cow.yy",
                 "resourceType": "GMObject"
             }
         },

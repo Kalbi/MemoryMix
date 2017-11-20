@@ -21,35 +21,35 @@ randomize();
 //create a unused cues list
 global.unused_cues = ds_list_create();
 //store animal sound cues in the list
-ds_list_add(global.unused_cues, obj_bird);
-ds_list_add(global.unused_cues, obj_cat);
-ds_list_add(global.unused_cues, obj_chicken);
-ds_list_add(global.unused_cues, obj_cow);
-ds_list_add(global.unused_cues, obj_dog);
-ds_list_add(global.unused_cues, obj_elephant);
-ds_list_add(global.unused_cues, obj_horse);
-ds_list_add(global.unused_cues, obj_lion);
-ds_list_add(global.unused_cues, obj_pig);
-ds_list_add(global.unused_cues, obj_rooster);
-ds_list_add(global.unused_cues, obj_sheep);
-ds_list_add(global.unused_cues, obj_snake);
+ds_list_add(global.unused_cues, obj_ani_bird);
+ds_list_add(global.unused_cues, obj_ani_cat);
+ds_list_add(global.unused_cues, obj_ani_chicken);
+ds_list_add(global.unused_cues, obj_ani_cow);
+ds_list_add(global.unused_cues, obj_ani_dog);
+ds_list_add(global.unused_cues, obj_ani_elephant);
+ds_list_add(global.unused_cues, obj_ani_horse);
+ds_list_add(global.unused_cues, obj_ani_lion);
+ds_list_add(global.unused_cues, obj_ani_pig);
+ds_list_add(global.unused_cues, obj_ani_rooster);
+ds_list_add(global.unused_cues, obj_ani_sheep);
+ds_list_add(global.unused_cues, obj_ani_snake);
 //shuffle the sounds for randomization
 ds_list_shuffle(global.unused_cues)
 
 //maps our cues to the associated sounds
 global.cues_mapping = ds_map_create();
-ds_map_add(global.cues_mapping, obj_bird, snd_intro_bird);
-ds_map_add(global.cues_mapping, obj_cat, snd_intro_cat);
-ds_map_add(global.cues_mapping, obj_chicken, snd_intro_chicken);
-ds_map_add(global.cues_mapping, obj_cow, snd_intro_cow);
-ds_map_add(global.cues_mapping, obj_dog, snd_intro_dog);
-ds_map_add(global.cues_mapping, obj_elephant, snd_intro_elephant);
-ds_map_add(global.cues_mapping, obj_horse, snd_intro_horse);
-ds_map_add(global.cues_mapping, obj_lion, snd_intro_lion);
-ds_map_add(global.cues_mapping, obj_pig, snd_intro_pig);
-ds_map_add(global.cues_mapping, obj_rooster, snd_intro_rooster);
-ds_map_add(global.cues_mapping, obj_sheep, snd_intro_sheep);
-ds_map_add(global.cues_mapping, obj_snake, snd_intro_snake);
+ds_map_add(global.cues_mapping, obj_ani_bird, snd_intro_bird);
+ds_map_add(global.cues_mapping, obj_ani_cat, snd_intro_cat);
+ds_map_add(global.cues_mapping, obj_ani_chicken, snd_intro_chicken);
+ds_map_add(global.cues_mapping, obj_ani_cow, snd_intro_cow);
+ds_map_add(global.cues_mapping, obj_ani_dog, snd_intro_dog);
+ds_map_add(global.cues_mapping, obj_ani_elephant, snd_intro_elephant);
+ds_map_add(global.cues_mapping, obj_ani_horse, snd_intro_horse);
+ds_map_add(global.cues_mapping, obj_ani_lion, snd_intro_lion);
+ds_map_add(global.cues_mapping, obj_ani_pig, snd_intro_pig);
+ds_map_add(global.cues_mapping, obj_ani_rooster, snd_intro_rooster);
+ds_map_add(global.cues_mapping, obj_ani_sheep, snd_intro_sheep);
+ds_map_add(global.cues_mapping, obj_ani_snake, snd_intro_snake);
 
 
 //ACTIONS
@@ -57,15 +57,28 @@ ds_map_add(global.cues_mapping, obj_snake, snd_intro_snake);
 //create unused actions list
 global.unused_actions = ds_list_create();
 // store actions in list
-ds_list_add(global.unused_actions, vk_down);
-ds_list_add(global.unused_actions, vk_up);
-ds_list_add(global.unused_actions, vk_left);
-ds_list_add(global.unused_actions, vk_right);
-ds_list_add(global.unused_actions, vk_space);
-ds_list_add(global.unused_actions, global.swipedownid);
-ds_list_add(global.unused_actions, global.swipeupid);
-ds_list_add(global.unused_actions, global.swiperightid);
-ds_list_add(global.unused_actions, global.swipeleftid);
+if (obj_options.curr_actions == obj_options.actions.both){
+	ds_list_add(global.unused_actions, vk_down);
+	ds_list_add(global.unused_actions, vk_up);
+	ds_list_add(global.unused_actions, vk_left);
+	ds_list_add(global.unused_actions, vk_right);
+	ds_list_add(global.unused_actions, vk_space);
+	ds_list_add(global.unused_actions, global.swipedownid);
+	ds_list_add(global.unused_actions, global.swipeupid);
+	ds_list_add(global.unused_actions, global.swiperightid);
+	ds_list_add(global.unused_actions, global.swipeleftid);
+}else if (obj_options.curr_actions == obj_options.actions.keys){
+	ds_list_add(global.unused_actions, vk_down);
+	ds_list_add(global.unused_actions, vk_up);
+	ds_list_add(global.unused_actions, vk_left);
+	ds_list_add(global.unused_actions, vk_right);
+	ds_list_add(global.unused_actions, vk_space);
+}else{
+	ds_list_add(global.unused_actions, global.swipedownid);
+	ds_list_add(global.unused_actions, global.swipeupid);
+	ds_list_add(global.unused_actions, global.swiperightid);
+	ds_list_add(global.unused_actions, global.swipeleftid);
+}
 ds_list_shuffle(global.unused_actions);
 
 //maps our actions to the associated sounds

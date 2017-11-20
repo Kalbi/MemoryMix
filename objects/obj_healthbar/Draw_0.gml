@@ -1,5 +1,5 @@
 draw_self();
-if !instance_exists(obj_selector) exit; // prevents a crash, if player doesn't exist we dont draw
+if !instance_exists(obj_spselector) exit; // prevents a crash, if player doesn't exist we dont draw
 
 // makes our health bar move smoother using lerp function
 draw_health = lerp(draw_health, global.healths, .5);

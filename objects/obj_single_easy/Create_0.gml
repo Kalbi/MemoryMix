@@ -19,4 +19,4 @@ global.c = 0;
 cuenum = 0;
 
 audio_play_sound(snd_round1, 0, 0)
-alarm[11] = 30;
+alarm[0] = 30;

@@ -1,3 +1,3 @@
-p2score = -20;
-global.p2correct = false;
+p2score = 0;
+global.p2correct = 0;
 

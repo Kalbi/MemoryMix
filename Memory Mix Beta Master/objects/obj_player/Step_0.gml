@@ -11,6 +11,8 @@ if(global.p1correct = 2) {
 	}else{
 		global.thescore = 0;
 	}
+	audio_play_sound(snd_soundintro, 0, 0);
+	//alarm[0] = 30;
 	instance_destroy(ds_list_find_value(global.round_cues, global.num));
 	instance_create_depth(512, 384, 0, obj_incorrect);
 	global.healths -= 1;

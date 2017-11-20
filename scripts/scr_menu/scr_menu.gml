@@ -14,12 +14,13 @@ switch(mpos) {
 	}
 	
 	case 2: {
+		room_goto(Options);
+		audio_pause_all();
 		break;
 	}
 	
 	case 3: {
-		room_goto(Instructions)
-		audio_pause_all();
+		game_end();
 		break;
 	}
 	default: break;
