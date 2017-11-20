@@ -1,4 +1,4 @@
-/// @description Step thru SP options menu
+/// @description Step thru MP options menu
 
 var move = 0;
 

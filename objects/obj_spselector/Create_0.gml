@@ -156,8 +156,12 @@ ds_map_add(global.cue_sounds, obj_cty_truck, snd_intro_snake);*/
 //create unused actions list
 global.unused_actions = ds_list_create();
 // store actions in list
-if (obj_options.curr_actions == obj_options.controltype.keyboard){
+//if options == keyboard
+if (obj_options.curr_controltype == obj_options.controltype.keyboard){
+	audio_play_sound(snd_cty_pigeons,0,0);
 	if (obj_options.curr_actions == obj_options.actions.both){
+		
+		//audio_play_sound(snd_cty_honk, 0, 0);
 		ds_list_add(global.unused_actions, vk_down);
 		ds_list_add(global.unused_actions, vk_up);
 		ds_list_add(global.unused_actions, vk_left);
@@ -192,9 +196,10 @@ if (obj_options.curr_actions == obj_options.controltype.keyboard){
 	ds_map_add(global.action_mapping, global.swipeleftid, snd_action_swipeleft);
 	ds_map_add(global.action_mapping, global.swiperightid, snd_action_swiperight);
 	ds_map_add(global.action_mapping, vk_space, snd_action_pressspace);
-}else{
-	
+}else{ //else we picked controller
+	//audio_play_sound(snd_cty_honk, 0, 0);
 	if (obj_options.curr_actions == obj_options.actions.both){
+		//
 		ds_list_add(global.unused_actions, gp_face1);
 		ds_list_add(global.unused_actions, gp_face4);
 		ds_list_add(global.unused_actions, gp_face3);
@@ -220,7 +225,6 @@ if (obj_options.curr_actions == obj_options.controltype.keyboard){
 	
 	//maps our actions to the associated sounds
 	global.action_mapping = ds_map_create();
-	show_debug_message("hereeeeeee");
 	ds_map_add(global.action_mapping, gp_face1, snd_action_pressdown);
 	ds_map_add(global.action_mapping, gp_face4, snd_action_pressup);
 	ds_map_add(global.action_mapping, gp_face3, snd_action_pressleft);

@@ -4,7 +4,7 @@ global.swiperightid = 5002;
 global.swipeleftid = 5003;
 
 if (global.easy) {
-	instance_create_layer(250, 600, "Instances", obj_single_easy);
+	instance_create_layer(250, 600, "Instances", obj_multi_easy);
 }
 if (global.medium) {
 	instance_create_layer(250, 600, "Instances", obj_single_medium);
@@ -13,8 +13,6 @@ if (global.hard) {
 	instance_create_layer(250, 600, "Instances", obj_single_hard);
 }
 
-// initialize score
-global.thescore = 0;
 
 //CUES
 randomize();

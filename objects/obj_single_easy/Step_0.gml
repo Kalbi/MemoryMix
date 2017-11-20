@@ -24,12 +24,13 @@ if (global.roundnum > 5) {
 		room_goto(Title_screen)
 	}
 
-	if (cuenum == 10) {
+	if (cuenum == 4) {
 		global.swipedown = false;
 		global.swipeup = false;
 		global.swipeleft = false;
 		global.swiperight = false;
 		alarm[10] = 150;
+		
 	}
 
 	if (keyboard_check(vk_tab)) {

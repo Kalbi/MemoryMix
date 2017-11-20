@@ -1,3 +1,4 @@
-p2score = 0;
+score_ = 0;
+healths = global.maxhealths;
 global.p2correct = 0;
 

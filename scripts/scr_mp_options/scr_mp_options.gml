@@ -2,6 +2,12 @@
 
 switch(mpos) {
 	case 0: {
+		audio_pause_all();
+		room_goto(Multiplayer_Instructions);
+		break;
+	}
+	
+	case 1: {
 		//start easy
 		global.easy = true;
 		audio_pause_all();
@@ -9,7 +15,7 @@ switch(mpos) {
 		break;
 	}
 	
-	case 1: {
+	case 2: {
 		//start medium
 		global.medium = true;
 		audio_pause_all();
@@ -17,7 +23,7 @@ switch(mpos) {
 		break;
 	}
 	
-	case 2: {
+	case 3: {
 		// start hard
 		global.hard = true;
 		audio_pause_all();

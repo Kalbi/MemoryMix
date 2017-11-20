@@ -1,4 +1,4 @@
-global.thescore = 0;
-//p1score = global.thescore;
-global.p1correct = false;
+score_ = 0;
+healths = global.maxhealths;
+global.p1correct = 0;
 

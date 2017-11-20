@@ -1,8 +1,6 @@
 global.roundnum = 0;
 
-global.thescore = 0;
-
-global.healths = 7;
+global.maxhealths = 7;
 
 global.collide = -1;
 
