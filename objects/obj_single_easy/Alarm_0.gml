@@ -13,6 +13,7 @@
 		//remove used actions from unused actions list
 		ds_list_delete(global.unused_actions, 0);
 		
+	
 		
 		audio_play_sound(snd_soundintro, 0, 0);
 		 // "When you hear"   	

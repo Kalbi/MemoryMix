@@ -1,16 +1,13 @@
 if (obj_options.curr_controltype == obj_options.controltype.keyboard){	
+
 	if(global.p1correct == 1) {
 		instance_destroy(ds_list_find_value(global.round_cues, global.num));
 		instance_create_depth(512, 384, 0, obj_correct);
 		global.thescore += global.cuescore;
 		global.p1correct = 0;
-	}
-
-	if(global.p1correct == 0) {
+	} else if(global.p1correct == 0) {
 		alarm[0] = 90;
-	}
-
-	if(global.p1correct == 2) { 
+	} else if(global.p1correct == 2) { 
 		instance_destroy(ds_list_find_value(global.round_cues, global.num));
 		instance_create_depth(512, 384, 0, obj_incorrect);
 		if (global.thescore > 90) {
@@ -19,7 +16,7 @@ if (obj_options.curr_controltype == obj_options.controltype.keyboard){
 			global.thescore = 0;
 		}
 		if (object_exists(obj_single_easy) or object_exists(obj_multi_easy)){
-			reminder = true;
+			//reminder = true;
 			alarm[1] = 30;
 		}
 		global.healths -=1;
@@ -47,7 +44,7 @@ if (obj_options.curr_controltype == obj_options.controltype.keyboard){
 			global.thescore = 0;
 		}
 		if (object_exists(obj_single_easy) or object_exists(obj_multi_easy)){
-			reminder = true;
+			//reminder = true;
 			alarm[1] = 30;
 		}
 		global.healths -=1;

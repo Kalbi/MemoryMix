@@ -10,10 +10,6 @@ if (global.roundnum > 5) {
 } else {
 
 	if (global.cue_cooldown < 0 and global.collide == (global.roundnum)) {
-		global.swipedown = false;
-		global.swipeup = false;
-		global.swipeleft = false;
-		global.swiperight = false;
 		global.num = irandom_range(0, 1+(global.roundnum)); 
 		instance_create_layer(512, 384, "Instances" , ds_list_find_value(global.round_cues, global.num) );
 		global.cue_cooldown += 150;
@@ -25,10 +21,6 @@ if (global.roundnum > 5) {
 	}
 
 	if (cuenum == 10) {
-		global.swipedown = false;
-		global.swipeup = false;
-		global.swipeleft = false;
-		global.swiperight = false;
 		alarm[10] = 150;
 	}
 

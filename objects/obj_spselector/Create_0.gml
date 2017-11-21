@@ -158,7 +158,7 @@ global.unused_actions = ds_list_create();
 // store actions in list
 //if options == keyboard
 if (obj_options.curr_controltype == obj_options.controltype.keyboard){
-	audio_play_sound(snd_cty_pigeons,0,0);
+	//audio_play_sound(snd_cty_pigeons,0,0);
 	if (obj_options.curr_actions == obj_options.actions.both){
 		
 		//audio_play_sound(snd_cty_honk, 0, 0);

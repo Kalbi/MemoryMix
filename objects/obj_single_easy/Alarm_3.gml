@@ -8,7 +8,7 @@ if (global.roundnum ==1) {
 		alarm[11] = 30;
 	}
 }else{
-	if(global.c < 0 and global.roundnum > 1) {
+	if(global.c == ds_list_size(global.round_cues) and global.roundnum > 1) {
 		global.c += 1;
 		alarm[0]=10;
 	}else{
