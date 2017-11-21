@@ -1,6 +1,10 @@
 if (obj_options.curr_controltype == obj_options.controltype.keyboard){	
 
 	if(global.p1correct == 1) {
+		global.swipedown = false;
+		global.swipeup = false;
+		global.swipeleft = false;
+		global.swiperight = false;
 		instance_destroy(ds_list_find_value(global.round_cues, global.num));
 		instance_create_depth(512, 384, 0, obj_correct);
 		global.thescore += global.cuescore;
