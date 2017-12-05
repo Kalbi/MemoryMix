@@ -1,2 +1,6 @@
-audio_play_sound( ds_map_find_value(global.action_mapping, ds_list_find_value(global.round_actions, 3*(global.roundnum-1))) ,0,0);
-alarm[6] = 100;
+if (player == 1){
+	audio_play_sound(snd_easy, 0, 0);
+}else if (player == 2) {
+	audio_play_sound(snd_medium, 0, 0);
+}
+alarm[2] = 30;

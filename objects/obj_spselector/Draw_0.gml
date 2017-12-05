@@ -3,6 +3,9 @@ draw_set_font(fnt_big)
 
 draw_text(365, 100, string("Round ") + string(global.roundnum));
 
-draw_set_font(fnt_title)
+if (obj_player){
 
-draw_text(50, 100, string("Score: ") + string(global.thescore));
+	draw_set_font(fnt_title)
+
+	draw_text(50, 100, string("Score: ") + string(global.thescore));
+}

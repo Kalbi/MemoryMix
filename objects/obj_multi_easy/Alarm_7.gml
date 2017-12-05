@@ -1,4 +1,7 @@
-/// @description Begins round introduction
-cuenum = 0;
-global.roundnum +=1;
-alarm[0] = 10;
+audio_play_sound(snd_and, 0, 0);
+if (global.double_cue) {
+	alarm[4] = 30;
+} else {
+	player += 1;
+	alarm[5] = 30;
+}

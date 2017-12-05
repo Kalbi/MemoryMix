@@ -1,31 +1,26 @@
-// when we select a menu item, do this
+// Executes when a pause menu item is selected
 
 switch(mpos) {
-	case 0: {
+	case 0: { // Resumes the game from when it was paused
 		obj_pause.pause = 0;
-		instance_destroy(obj_single_easy_help);
+		instance_destroy(obj_single_easy_help);// stops the "help" voice if the player moves to a different option
 		audio_pause_all();
 		instance_activate_all();
 		instance_destroy();
 		break;
 	}
 	
-	case 1: {
+	case 1: { // Restates each cue and its associated action
+		audio_pause_all();
 		instance_create_depth(10, 10, 0, obj_single_easy_help);
 		break;
 	}
 	
-	case 2: {
-		
-		
+	case 2: { // Exits the current game and returns the player to the Main Menu
+		instance_destroy(obj_single_easy_help);// stops the "help" voice if the player moves to a different option
+		audio_pause_all();
+		room_goto(Title_screen);
 		break;
 	}
-	
-	case 3: {
-		game_restart();
-		break;
-	}
-	default: break;
-	
-	
+	default: break;	
 }

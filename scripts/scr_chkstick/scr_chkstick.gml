@@ -1,7 +1,7 @@
-
+// Checks if the player moved the joystick in a certain direction
 stickid = argument[0];
-if (stickid == global.stickdownid) { //check the id
-	return (gamepad_axis_value(0, gp_axislv) > .7); //check the actual bool to see if swiped
+if (stickid == global.stickdownid) { //checks the ID
+	return (gamepad_axis_value(0, gp_axislv) > .7); //checks the actual bool to see if swiped
 }
 
 if (stickid == global.stickupid) {

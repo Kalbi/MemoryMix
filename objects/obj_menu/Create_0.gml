@@ -9,3 +9,8 @@ menu[3] = "Exit Game";
 
 space = 100;
 mpos = 0;
+
+global.single = false;
+global.multi = false;
+
+global.returncooldown = 10;

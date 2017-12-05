@@ -1,8 +1,5 @@
-global.c = 0;
-global.collide += 1;
-global.cue_cooldown = 0;
-
-	global.swipedown = false;
-	global.swipeup = false;
-	global.swipeleft = false;
-	global.swiperight = false;
+if (global.wait = false) {
+	alarm[9] =1;
+}else{
+	alarm[9] = 150;
+}

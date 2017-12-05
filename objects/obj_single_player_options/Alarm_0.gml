@@ -1,0 +1,1 @@
+audio_play_sound(snd_single_player, 0, 0)

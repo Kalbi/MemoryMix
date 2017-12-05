@@ -1,15 +1,31 @@
-global.roundnum = 0;
+// Easy mode has 7 healths for the player, introduces only 1 new cue per round after
+// round 1 and reminds the player what the action is for a cue when they get it incorrect
 
-global.maxhealths = 7;
+global.roundnum = 1; // Which round the player is currently in
 
-global.collide = -1;
+global.thescore = 0; // The player's score
 
-global.cue_cooldown = 600;
+global.maxhealths = 2; // The player's staring health
 
-global.num = 0;
+global.healths = global.maxhealths; // The player starts with full health
 
-global.c = 0;
+global.collide = -1; // Makes sure that the round stops generating cues when the next round's intro is happening
 
-cuenum = 0;
+global.cue_cooldown = 1100; // Puts space inbetween the cues that are generated each round so that the player has time to respond
 
-alarm[7] = 10;
+global.num = 0; // Which cue from the round cues list is chosen to be generated randomly during a round
+
+global.c = 0; // Counts how many round cues are in use
+
+cuenum = 0; // Tracks how many cues have been generated in the current round
+
+audio_play_sound(snd_round1, 0, 0) // "Round 1"
+alarm[0] = 30;
+
+global.double_cue = false;
+
+global.wait = false;
+
+global.gameover = false;
+
+player = 1;

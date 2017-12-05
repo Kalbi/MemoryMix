@@ -1,4 +1,4 @@
-/// @description loops through again or goes to round
+/// @description Loops through cue intro again or goes to round intro end
 if (global.roundnum ==1) {
 	if(global.c < 2 and global.roundnum ==1) {
 		global.c += 1;
@@ -16,3 +16,4 @@ if (global.roundnum ==1) {
 		alarm[11] = 30;
 	}
 }
+

@@ -1,6 +1,4 @@
 /// @description SP Menu vars
-//
-// 
 
 // More tries, less new cues intro per round
 menu[0] = "Instructions";
@@ -16,9 +14,14 @@ menu[3] = "Hard Mode";
 space = 100;
 mpos = 0;
 
-// option variables
-// bc now its bglobal just name it global.sp_easy
+// difficulty variables
 global.easy = false;
 global.medium = false;
 global.hard = false;
 
+time_options = 60;
+
+audio_pause_all();
+
+audio_play_sound(snd_selected, 0, 0);
+alarm[0] = 30;

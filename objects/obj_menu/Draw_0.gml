@@ -11,3 +11,4 @@ for (i = 0; i < array_length_1d(menu); i++) {
 }
 
 draw_sprite(sprite_index, 0, x + 20, y + mpos * space);
+

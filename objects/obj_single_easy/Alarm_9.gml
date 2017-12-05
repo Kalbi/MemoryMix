@@ -1,9 +1,6 @@
-/// @description creates cue object
+/// @description "Your score is"
 
-	global.swipedown = false;
-	global.swipeup = false;
-	global.swipeleft = false;
-	global.swiperight = false;
-	
-instance_create_depth(512, 384, 0, ds_list_find_value(global.round_cues, global.c+2+(global.roundnum-1)));
-alarm[5] = 45;
+	global.roundnum +=1;
+	audio_play_sound(snd_scoreis, 0, 0);
+	instance_create_depth(10, 10, 0, obj_scrspeak);
+	alarm[10] = 200;

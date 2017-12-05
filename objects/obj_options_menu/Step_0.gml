@@ -1,12 +1,16 @@
 /// @description Step through the menu.
-
+if (time_options <= 0) {	
+	audio_play_sound(snd_options_menu, 0, 0);
+	time_options += 400;
+}
+time_options -= 1;
 var move = 0;
 
 move -= max(keyboard_check_pressed(vk_up), 0);
 move += max(keyboard_check_pressed(vk_down), 0);
 
 if (move != 0) {
-	
+	time_options += 100;
 	// TODO: Here we should add sound for the menu for whichever option we're on.
 	// Whenever we choose a new option, we should stop the sound and just play the next one
 	// because we don't want to control the speed at which the player moves the arrows.
@@ -16,28 +20,51 @@ if (move != 0) {
 	show_debug_message(string(mpos));
 	switch(mpos) {
 	case 0: { //sp options
+		audio_pause_all();
+		audio_play_sound(snd_music, 0, 0);
 		global.music_options = true;
+		global.sound_pack = false;
 		global.controls_options = false;
 		global.actions_options = false;
 		goback = false;
 		break;
 	}
-	case 1: { //mp options
+	case 1: { //sp options
+		audio_pause_all();
+		audio_play_sound(snd_soundpack, 0, 0);
 		global.music_options = false;
+		global.sound_pack = true;
+		global.controls_options = false;
+		global.actions_options = false;
+		goback = false;
+		break;
+	}
+	case 2: { //mp options
+		audio_pause_all();
+		audio_play_sound(snd_controls, 0, 0);
+		global.music_options = false;
+		global.sound_pack = false;
 		global.controls_options = true;
 		global.actions_options = false;
 		goback = false;
 		break;
 	}
-	case 2: { //options
+	case 3: { //options
+		audio_pause_all();
+		audio_play_sound(snd_actions, 0, 0);
 		global.music_options = false;
+		global.sound_pack = false;
 		global.controls_options = false;
 		global.actions_options = true;
 		goback = false;
 		break;
 	}
-	case 3: { //options
+	case 4: { //options
+		audio_pause_all();
+		audio_play_sound(snd_returntomenu, 0, 0);
+		alarm[1] = 40;
 		global.music_options = false;
+		global.sound_pack = false;
 		global.controls_options = false;
 		global.actions_options = false;
 		goback = true;
@@ -46,14 +73,4 @@ if (move != 0) {
 }
 	
 }
-
-
-
-/*var push;
-push = max(keyboard_check_released(vk_enter), 0);
-
-// README: This is probably a good way to squeeze all of our audio playback code
-// for organizations' sake
-if (push==1) scr_menu();
-
 

@@ -1,34 +1,36 @@
 /// @description Step through the menu.
-
+if (time_options <= 0) {	
+	audio_play_sound(snd_pause_menu, 0, 0);
+	time_options += 400;
+}
+time_options -= 1;
 var move = 0;
 
 move -= max(keyboard_check_pressed(vk_up), 0);
 move += max(keyboard_check_pressed(vk_down), 0);
 
 if (move != 0) {
-	
-	// TODO: Here we should add sound for the menu for whichever option we're on.
-	// Whenever we choose a new option, we should stop the sound and just play the next one
-	// because we don't want to control the speed at which the player moves the arrows.
 	mpos += move;
 	if (mpos < 0) mpos = array_length_1d(menu)-1;
 	if (mpos > array_length_1d(menu)-1) mpos = 0;
 	show_debug_message(string(mpos));
 	switch(mpos) {
-	case 0: { //sp options
-	
+	// says the menu item that was just scrolled to		
+	case 0: { // resume
+		audio_pause_all();
+		instance_destroy(obj_single_easy_help); // stops the "help" audio if player moves away from that item
+		audio_play_sound(snd_resume, 0, 0);
 		break;
 	}
-	case 1: { //mp options
-	
+	case 1: { // help
+		audio_pause_all();
+		audio_play_sound(snd_help, 0, 0);
 		break;
 	}
-	case 2: { //options
-		
-		break;
-	}
-	case 3: { //options
-		
+	case 2: { //quit game
+		audio_pause_all();
+		instance_destroy(obj_single_easy_help); // stops the "help" audio if player moves away from that item
+		audio_play_sound(snd_quit, 0, 0);
 		break;
 	}
 }

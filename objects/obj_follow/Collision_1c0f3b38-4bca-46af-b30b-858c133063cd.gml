@@ -1,3 +1,4 @@
+// Sets that the player swiped down if obj_follow collides with boxes in the bottom region of the screen
 if (instance_exists(par_cue)) {
 	global.swipedown = true;
 }

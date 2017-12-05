@@ -1,3 +1,4 @@
+// sets the game to fullscreen so that the swipe feature works properly/effectively
 //window_set_fullscreen(true);
 
 // The time title variale creates a pause in between the repeating title screen audio

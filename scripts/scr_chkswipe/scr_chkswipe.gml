@@ -1,7 +1,7 @@
-
+// Checks if the player swiped in a certain direction
 swipeid = argument[0];
-if (swipeid == global.swipedownid) { //check the id
-	return global.swipedown; //check the actual bool to see if swiped
+if (swipeid == global.swipedownid) { //checks the ID
+	return global.swipedown; //checks the actual bool to see if swiped
 }
 
 if (swipeid == global.swipeupid) {
