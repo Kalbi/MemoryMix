@@ -11,8 +11,8 @@ if (obj_options.curr_actions == obj_options.actions.both){
 
 		if (global.cue_cooldown < 0 and global.collide == (global.roundnum)) {
 			global.num = irandom_range(0, 1+(global.roundnum)); 
-			// instance_create_layer(512, 384, "Instances" par_cue);
-			instance_create_layer(512, 384, "Instances" , ds_list_find_value(global.round_cues, global.num) );
+			instance_create_layer(512, 384, "Instances", par_cue);
+			//instance_create_layer(512, 400, "Instances" , ds_list_find_value(global.round_cues, global.num) );
 			global.cue_cooldown += 150;
 			cuenum += 1;
 		}

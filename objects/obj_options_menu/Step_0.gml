@@ -8,6 +8,9 @@ var move = 0;
 
 move -= max(keyboard_check_pressed(vk_up), 0);
 move += max(keyboard_check_pressed(vk_down), 0);
+move -= max(gamepad_button_check_pressed(0, gp_padu));
+move += max(gamepad_button_check_pressed(0, gp_padd));
+
 
 if (move != 0) {
 	time_options += 100;
@@ -21,6 +24,7 @@ if (move != 0) {
 	switch(mpos) {
 	case 0: { //sp options
 		audio_pause_all();
+		time_options = 350;
 		audio_play_sound(snd_music, 0, 0);
 		global.music_options = true;
 		global.sound_pack = false;
@@ -31,6 +35,7 @@ if (move != 0) {
 	}
 	case 1: { //sp options
 		audio_pause_all();
+		time_options = 350;
 		audio_play_sound(snd_soundpack, 0, 0);
 		global.music_options = false;
 		global.sound_pack = true;
@@ -41,6 +46,7 @@ if (move != 0) {
 	}
 	case 2: { //mp options
 		audio_pause_all();
+		time_options = 350;
 		audio_play_sound(snd_controls, 0, 0);
 		global.music_options = false;
 		global.sound_pack = false;
@@ -51,6 +57,7 @@ if (move != 0) {
 	}
 	case 3: { //options
 		audio_pause_all();
+		time_options = 350;
 		audio_play_sound(snd_actions, 0, 0);
 		global.music_options = false;
 		global.sound_pack = false;
@@ -62,6 +69,7 @@ if (move != 0) {
 	case 4: { //options
 		audio_pause_all();
 		audio_play_sound(snd_returntomenu, 0, 0);
+		time_options = 350;
 		alarm[1] = 40;
 		global.music_options = false;
 		global.sound_pack = false;
@@ -72,5 +80,9 @@ if (move != 0) {
 	}
 }
 	
+}
+if (gamepad_button_check_released(0, gp_select)){
+	audio_pause_all();
+	room_goto(Title_screen);
 }
 

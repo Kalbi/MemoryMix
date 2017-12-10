@@ -1,6 +1,8 @@
 ///@description Round Introduction start
 	instance_destroy(obj_track1);
 	audio_pause_sound(mus_track1);
+	
+	global.chesney = false;
 
 	global.healths = global.maxhealths;
 	cuenum = 0;

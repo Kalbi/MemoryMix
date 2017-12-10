@@ -1,5 +1,5 @@
 // Sets that the player swiped up if obj_follow collides with boxes in the top region of the screen
-if (instance_exists(par_cue)) {
+if (instance_exists(obj_cue)) {
 	global.swipeup = true;
 }
 // Puts the mouse and obj_follow back in the center of the screen as soon as the swipe is registered

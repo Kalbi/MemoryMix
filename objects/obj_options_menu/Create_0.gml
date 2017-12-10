@@ -24,7 +24,7 @@ goback = false;
 		global.sound_pack = false;
 		global.controls_options = false;
 		global.actions_options = false;
-time_options = 60;
+time_options = 100;
 audio_pause_all();
 audio_play_sound(snd_selected, 0, 0);
 alarm[0] = 30;

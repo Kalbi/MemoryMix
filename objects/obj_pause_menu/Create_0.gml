@@ -6,3 +6,4 @@ menu[2] = "Quit Game";
 
 space = 100;
 mpos = 0;
+time_options = 0;

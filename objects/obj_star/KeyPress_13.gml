@@ -1,3 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
-starpower = true;
+if (global.collide == global.roundnum and keyboard_check_pressed(vk_enter)){
+	show_debug_message("starpower");
+	global.starpower = true;
+}
+show_debug_message("neither");

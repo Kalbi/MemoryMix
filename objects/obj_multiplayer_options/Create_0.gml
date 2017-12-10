@@ -15,6 +15,8 @@ menu[3] = "Hard Mode";
 space = 100;
 mpos = 0;
 
+time_options = 60;
+
 // option variables
 
 global.easy = false;

@@ -1,27 +1,32 @@
-/// @description check rounds and modify data structures accordingly
-/*if (instance_exists(obj_single_easy)) {
-	if(global.roundnum == 1) {
-		// The first round introduces three new cues
-		// stores top three unused cues in used cues list
-		ds_list_add(global.round_cues, ds_list_find_value(global.unused_cues, 0));
-		ds_list_add(global.round_cues, ds_list_find_value(global.unused_cues, 1));
-		ds_list_add(global.round_cues, ds_list_find_value(global.unused_cues, 2));
-	
-		//removes used cues from unused cues list
-		ds_list_delete(global.unused_cues, 0);
-		ds_list_delete(global.unused_cues, 0);
-		ds_list_delete(global.unused_cues, 0);
-
-		//stores top three unused actions in used actions list
-		ds_list_add(global.round_actions, ds_list_find_value(global.unused_actions, 0));
-		ds_list_add(global.round_actions, ds_list_find_value(global.unused_actions, 1));
-		ds_list_add(global.round_actions, ds_list_find_value(global.unused_actions, 2));
-
-		//remove used actions from unused actions list
-		ds_list_delete(global.unused_actions, 0);
-		ds_list_delete(global.unused_actions, 0);
-		ds_list_delete(global.unused_actions, 0);
-		
+if(global.gameover) {
+	audio_pause_all();
+	instance_deactivate_all(true);
+	// creates the gameover menu
+	instance_create_depth(300, 320, 0, obj_gameover);
+	global.gameover = false;
+}
+if (global.gamebeat) {
+	audio_pause_all();
+	instance_deactivate_all(true);
+	// creates the game beat menu
+	instance_create_depth(300, 320, 0, obj_beatgame);
+	global.gamebeat = false;
+}
+if (gamepad_button_check(0, gp_stickr) and pause_cooldown < 0) {
+	if(!pause) {
+		pause_cooldown = 30;
+	pause = 1;
+	audio_pause_all();
+	instance_deactivate_all(true);
+	// creates the pause menu
+	instance_create_depth(300, 320, 0, obj_pause_menu);
+	}else{
+		pause = 0;
+		audio_pause_all();
+		instance_activate_all();
+		//destroys the pause menu so that the game can resume without obstruction
+		instance_destroy(obj_pause_menu, noone);
 	}
 }
-	*/
+pause_cooldown -= 1;
+

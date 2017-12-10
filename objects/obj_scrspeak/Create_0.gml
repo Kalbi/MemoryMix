@@ -38,4 +38,7 @@ if(0 < number <= 19)
 	global.ones = number;
 	alarm[5] = 30*timing;
 }
+if (global.thescore == 0) {
+	audio_play_sound(snd_zero, 0, 0);
+}
 

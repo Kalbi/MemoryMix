@@ -5,7 +5,7 @@ global.roundnum = 1; // Which round the player is currently in
 
 global.thescore = 0; // The player's score
 
-global.maxhealths = 2; // The player's staring health
+global.maxhealths = 7; // The player's staring health
 
 global.healths = global.maxhealths; // The player starts with full health
 

@@ -1,5 +1,5 @@
 {
-    "id": "689222bc-4b37-4747-9dbb-6608f1c4ff80",
+    "id": "e91bd8a0-067a-4f23-ab3e-16d34dde4571",
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "snd_beatgame",

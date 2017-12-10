@@ -21,6 +21,9 @@ global.stickdown = false;
 global.stickleft = false;
 global.stickright = false;
 
+global.gamebeat = false;
+global.gameover = false;
+
 // Creates the appropriate round action depending on the difficulty that the player chose
 if (global.single){
 	if (global.easy) { // starts an easy game
@@ -54,40 +57,40 @@ global.unused_cues = ds_list_create();
 
 // Animal sound pack used if selected in settings
 if (obj_options.curr_sound_pack == obj_options.soundpack.animals){
-	ds_list_add(global.unused_cues, obj_ani_bird);
-	ds_list_add(global.unused_cues, obj_ani_cat);
-	ds_list_add(global.unused_cues, obj_ani_chicken);
-	ds_list_add(global.unused_cues, obj_ani_cow);
-	ds_list_add(global.unused_cues, obj_ani_dog);
-	ds_list_add(global.unused_cues, obj_ani_elephant);
-	ds_list_add(global.unused_cues, obj_ani_horse);
-	ds_list_add(global.unused_cues, obj_ani_lion);
-	ds_list_add(global.unused_cues, obj_ani_pig);
-	ds_list_add(global.unused_cues, obj_ani_rooster);
-	ds_list_add(global.unused_cues, obj_ani_sheep);
-	ds_list_add(global.unused_cues, obj_ani_snake);
+	ds_list_add(global.unused_cues, sprt_bird);
+	ds_list_add(global.unused_cues, sprt_cat);
+	ds_list_add(global.unused_cues, sprt_chicken);
+	ds_list_add(global.unused_cues, sprt_cow);
+	ds_list_add(global.unused_cues, sprt_dog);
+	ds_list_add(global.unused_cues, sprt_elephant);
+	ds_list_add(global.unused_cues, sprt_horse);
+	ds_list_add(global.unused_cues, sprt_lion);
+	ds_list_add(global.unused_cues, sprt_pig);
+	ds_list_add(global.unused_cues, sprt_rooster);
+	ds_list_add(global.unused_cues, sprt_sheep);
+	ds_list_add(global.unused_cues, sprt_snake);
 // Instrument sound pack used if selected in settings
 }else if (obj_options.curr_sound_pack == obj_options.soundpack.instruments){
-	ds_list_add(global.unused_cues, obj_ins_clarinet);
-	ds_list_add(global.unused_cues, obj_ins_drum);
-	ds_list_add(global.unused_cues, obj_ins_guitar);
-	ds_list_add(global.unused_cues, obj_ins_harp);
-	ds_list_add(global.unused_cues, obj_ins_piano);
-	ds_list_add(global.unused_cues, obj_ins_horn);
-	ds_list_add(global.unused_cues, obj_ins_violin);
-	ds_list_add(global.unused_cues, obj_ins_oboe);
-	ds_list_add(global.unused_cues, obj_ins_cymbals);
+	ds_list_add(global.unused_cues, sprt_clarinet);
+	ds_list_add(global.unused_cues, sprt_drum);
+	ds_list_add(global.unused_cues, sprt_guitar);
+	ds_list_add(global.unused_cues, sprt_harp);
+	ds_list_add(global.unused_cues, sprt_piano);
+	ds_list_add(global.unused_cues, sprt_horn);
+	ds_list_add(global.unused_cues, sprt_violin);
+	ds_list_add(global.unused_cues, sprt_oboe);
+	ds_list_add(global.unused_cues, sprt_cymbals);
 // City sound pack used if selected in settings	
 }else{
-	ds_list_add(global.unused_cues, obj_cty_bike);
-	ds_list_add(global.unused_cues, obj_cty_carunlock);
-	ds_list_add(global.unused_cues, obj_cty_honking);
-	ds_list_add(global.unused_cues, obj_cty_jackhammer);
-	ds_list_add(global.unused_cues, obj_cty_pigeons);
-	ds_list_add(global.unused_cues, obj_cty_siren);
-	ds_list_add(global.unused_cues, obj_cty_subway);
-	ds_list_add(global.unused_cues, obj_cty_train);
-	ds_list_add(global.unused_cues, obj_cty_truck);
+	ds_list_add(global.unused_cues, sprt_bike);
+	ds_list_add(global.unused_cues, sprt_carunlock);
+	ds_list_add(global.unused_cues, sprt_car);
+	ds_list_add(global.unused_cues, sprt_jackhammer);
+	ds_list_add(global.unused_cues, sprt_pigeons);
+	ds_list_add(global.unused_cues, sprt_siren);
+	ds_list_add(global.unused_cues, sprt_subway);
+	ds_list_add(global.unused_cues, sprt_train);
+	ds_list_add(global.unused_cues, sprt_digger);
 }
 
 //shuffle the cue sounds for randomization
@@ -95,75 +98,75 @@ ds_list_shuffle(global.unused_cues)
 
 //maps the cues to their names (Ex: "the bird" is mapped to the bird object)
 global.cues_mapping = ds_map_create();
-ds_map_add(global.cues_mapping, obj_ani_bird, snd_intro_bird);
-ds_map_add(global.cues_mapping, obj_ani_cat, snd_intro_cat);
-ds_map_add(global.cues_mapping, obj_ani_chicken, snd_intro_chicken);
-ds_map_add(global.cues_mapping, obj_ani_cow, snd_intro_cow);
-ds_map_add(global.cues_mapping, obj_ani_dog, snd_intro_dog);
-ds_map_add(global.cues_mapping, obj_ani_elephant, snd_intro_elephant);
-ds_map_add(global.cues_mapping, obj_ani_horse, snd_intro_horse);
-ds_map_add(global.cues_mapping, obj_ani_lion, snd_intro_lion);
-ds_map_add(global.cues_mapping, obj_ani_pig, snd_intro_pig);
-ds_map_add(global.cues_mapping, obj_ani_rooster, snd_intro_rooster);
-ds_map_add(global.cues_mapping, obj_ani_sheep, snd_intro_sheep);
-ds_map_add(global.cues_mapping, obj_ani_snake, snd_intro_snake);
+ds_map_add(global.cues_mapping, sprt_bird, snd_intro_bird);
+ds_map_add(global.cues_mapping, sprt_cat, snd_intro_cat);
+ds_map_add(global.cues_mapping, sprt_chicken, snd_intro_chicken);
+ds_map_add(global.cues_mapping, sprt_cow, snd_intro_cow);
+ds_map_add(global.cues_mapping, sprt_dog, snd_intro_dog);
+ds_map_add(global.cues_mapping, sprt_elephant, snd_intro_elephant);
+ds_map_add(global.cues_mapping, sprt_horse, snd_intro_horse);
+ds_map_add(global.cues_mapping, sprt_lion, snd_intro_lion);
+ds_map_add(global.cues_mapping, sprt_pig, snd_intro_pig);
+ds_map_add(global.cues_mapping, sprt_rooster, snd_intro_rooster);
+ds_map_add(global.cues_mapping, sprt_sheep, snd_intro_sheep);
+ds_map_add(global.cues_mapping, sprt_snake, snd_intro_snake);
 // Instrument sound pack
-ds_map_add(global.cues_mapping, obj_ins_clarinet, snd_intro_clarinet);
-ds_map_add(global.cues_mapping, obj_ins_drum, snd_intro_drums);
-ds_map_add(global.cues_mapping, obj_ins_guitar, snd_intro_guitar);
-ds_map_add(global.cues_mapping, obj_ins_harp, snd_intro_harp);
-ds_map_add(global.cues_mapping, obj_ins_piano, snd_intro_piano);
-ds_map_add(global.cues_mapping, obj_ins_horn, snd_intro_horn);
-ds_map_add(global.cues_mapping, obj_ins_oboe, snd_intro_oboe);
-ds_map_add(global.cues_mapping, obj_ins_cymbals, snd_intro_cymbals);
-ds_map_add(global.cues_mapping, obj_ins_violin, snd_intro_violin);
+ds_map_add(global.cues_mapping, sprt_clarinet, snd_intro_clarinet);
+ds_map_add(global.cues_mapping, sprt_drum, snd_intro_drums);
+ds_map_add(global.cues_mapping, sprt_guitar, snd_intro_guitar);
+ds_map_add(global.cues_mapping, sprt_harp, snd_intro_harp);
+ds_map_add(global.cues_mapping, sprt_piano, snd_intro_piano);
+ds_map_add(global.cues_mapping, sprt_horn, snd_intro_horn);
+ds_map_add(global.cues_mapping, sprt_oboe, snd_intro_oboe);
+ds_map_add(global.cues_mapping, sprt_cymbals, snd_intro_cymbals);
+ds_map_add(global.cues_mapping, sprt_violin, snd_intro_violin);
 // City sound pack
-ds_map_add(global.cues_mapping, obj_cty_bike, snd_intro_bikebell);
-ds_map_add(global.cues_mapping, obj_cty_carunlock, snd_intro_carunlock);
-ds_map_add(global.cues_mapping, obj_cty_honking, snd_intro_carhonk);
-ds_map_add(global.cues_mapping, obj_cty_jackhammer, snd_intro_jackhammer);
-ds_map_add(global.cues_mapping, obj_cty_pigeons, snd_intro_pigeons);
-ds_map_add(global.cues_mapping, obj_cty_siren, snd_intro_siren);
-ds_map_add(global.cues_mapping, obj_cty_subway, snd_intro_subway);
-ds_map_add(global.cues_mapping, obj_cty_train, snd_intro_trainbells);
-ds_map_add(global.cues_mapping, obj_cty_truck, snd_intro_truckreversing);
+ds_map_add(global.cues_mapping, sprt_bike, snd_intro_bikebell);
+ds_map_add(global.cues_mapping, sprt_carunlock, snd_intro_carunlock);
+ds_map_add(global.cues_mapping, sprt_car, snd_intro_carhonk);
+ds_map_add(global.cues_mapping, sprt_jackhammer, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_pigeons, snd_intro_pigeons);
+ds_map_add(global.cues_mapping, sprt_siren, snd_intro_siren);
+ds_map_add(global.cues_mapping, sprt_subway, snd_intro_subway);
+ds_map_add(global.cues_mapping, sprt_train, snd_intro_trainbells);
+ds_map_add(global.cues_mapping, sprt_digger, snd_intro_truckreversing);
 
 //maps the cues to their sounds (Ex: a tweeting bird sound is mapped to the bird object)
 global.cue_sounds = ds_map_create();
 // Animal sound pack
-ds_map_add(global.cue_sounds, obj_ani_bird, snd_ani_bird);
-ds_map_add(global.cue_sounds, obj_ani_cat, snd_ani_cat);
-ds_map_add(global.cue_sounds, obj_ani_chicken, snd_ani_chicken);
-ds_map_add(global.cue_sounds, obj_ani_cow, snd_ani_cow);
-ds_map_add(global.cue_sounds, obj_ani_dog, snd_ani_dog);
-ds_map_add(global.cue_sounds, obj_ani_elephant, snd_ani_elephant);
-ds_map_add(global.cue_sounds, obj_ani_horse, snd_ani_horse);
-ds_map_add(global.cue_sounds, obj_ani_lion, snd_ani_lion);
-ds_map_add(global.cue_sounds, obj_ani_pig, snd_ani_pig);
-ds_map_add(global.cue_sounds, obj_ani_rooster, snd_ani_rooster);
-ds_map_add(global.cue_sounds, obj_ani_sheep, snd_ani_sheep);
-ds_map_add(global.cue_sounds, obj_ani_snake, snd_ani_snake);
+ds_map_add(global.cue_sounds, sprt_bird, snd_ani_bird);
+ds_map_add(global.cue_sounds, sprt_cat, snd_ani_cat);
+ds_map_add(global.cue_sounds, sprt_chicken, snd_ani_chicken);
+ds_map_add(global.cue_sounds, sprt_cow, snd_ani_cow);
+ds_map_add(global.cue_sounds, sprt_dog, snd_ani_dog);
+ds_map_add(global.cue_sounds, sprt_elephant, snd_ani_elephant);
+ds_map_add(global.cue_sounds, sprt_horse, snd_ani_horse);
+ds_map_add(global.cue_sounds, sprt_lion, snd_ani_lion);
+ds_map_add(global.cue_sounds, sprt_pig, snd_ani_pig);
+ds_map_add(global.cue_sounds, sprt_rooster, snd_ani_rooster);
+ds_map_add(global.cue_sounds, sprt_sheep, snd_ani_sheep);
+ds_map_add(global.cue_sounds, sprt_snake, snd_ani_snake);
 // Instrument sound pack
-ds_map_add(global.cue_sounds, obj_ins_clarinet, snd_ins_clarinet);
-ds_map_add(global.cue_sounds, obj_ins_drum, snd_ins_drums);
-ds_map_add(global.cue_sounds, obj_ins_guitar, snd_ins_guitar);
-ds_map_add(global.cue_sounds, obj_ins_harp, snd_ins_harp);
-ds_map_add(global.cue_sounds, obj_ins_piano, snd_ins_piano);
-ds_map_add(global.cue_sounds, obj_ins_horn, snd_ins_horn);
-ds_map_add(global.cue_sounds, obj_ins_violin, snd_ins_violin);
-ds_map_add(global.cue_sounds, obj_ins_cymbals, snd_ins_cymbals);
-ds_map_add(global.cue_sounds, obj_ins_oboe, snd_ins_oboe);
+ds_map_add(global.cue_sounds, sprt_clarinet, snd_ins_clarinet);
+ds_map_add(global.cue_sounds, sprt_drum, snd_ins_drums);
+ds_map_add(global.cue_sounds, sprt_guitar, snd_ins_guitar);
+ds_map_add(global.cue_sounds, sprt_harp, snd_ins_harp);
+ds_map_add(global.cue_sounds, sprt_piano, snd_ins_piano);
+ds_map_add(global.cue_sounds, sprt_horn, snd_ins_horn);
+ds_map_add(global.cue_sounds, sprt_violin, snd_ins_violin);
+ds_map_add(global.cue_sounds, sprt_cymbals, snd_ins_cymbals);
+ds_map_add(global.cue_sounds, sprt_oboe, snd_ins_oboe);
 
 // City sound pack
-ds_map_add(global.cue_sounds, obj_cty_bike, snd_cty_bikebell);
-ds_map_add(global.cue_sounds, obj_cty_carunlock, snd_cty_carunlock);
-ds_map_add(global.cue_sounds, obj_cty_honking, snd_cty_honk);
-ds_map_add(global.cue_sounds, obj_cty_jackhammer, snd_cty_jackhammer);
-ds_map_add(global.cue_sounds, obj_cty_pigeons, snd_cty_pigeons);
-ds_map_add(global.cue_sounds, obj_cty_siren, snd_cty_siren);
-ds_map_add(global.cue_sounds, obj_cty_subway, snd_cty_subway);
-ds_map_add(global.cue_sounds, obj_cty_train, snd_cty_train);
-ds_map_add(global.cue_sounds, obj_cty_truck, snd_cty_truck);
+ds_map_add(global.cue_sounds, sprt_bike, snd_cty_bikebell);
+ds_map_add(global.cue_sounds, sprt_carunlock, snd_cty_carunlock);
+ds_map_add(global.cue_sounds, sprt_car, snd_cty_honk);
+ds_map_add(global.cue_sounds, sprt_jackhammer, snd_cty_jackhammer);
+ds_map_add(global.cue_sounds, sprt_pigeons, snd_cty_pigeons);
+ds_map_add(global.cue_sounds, sprt_siren, snd_cty_siren);
+ds_map_add(global.cue_sounds, sprt_subway, snd_cty_subway);
+ds_map_add(global.cue_sounds, sprt_train, snd_cty_train);
+ds_map_add(global.cue_sounds, sprt_digger, snd_cty_truck);
 
 //ACTIONS
 

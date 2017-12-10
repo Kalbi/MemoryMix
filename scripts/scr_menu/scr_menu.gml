@@ -3,6 +3,8 @@
 switch(mpos) {
 	case 0: { // Selects Single Player
 		if (global.returncooldown <= 0) {
+			global.multi = false;
+			global.single = true;
 			room_goto(Single_player_options);
 			audio_pause_all();
 		}
@@ -10,6 +12,8 @@ switch(mpos) {
 	}
 	
 	case 1: { // Selects Multiplayer (not currently implemented)
+		global.multi = true;
+		global.single = false;
 		room_goto(Multiplayer_options);
 		audio_pause_all();
 		break;
