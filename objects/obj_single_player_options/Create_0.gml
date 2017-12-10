@@ -21,6 +21,8 @@ global.hard = false;
 
 time_options = 60;
 
+stop = false;
+
 audio_pause_all();
 
 audio_play_sound(snd_selected, 0, 0);

@@ -30,6 +30,8 @@ last_round = false;
 secondtolast_round = false;
 
 font = fnt_big;
+player = 1;
+
 
 audio_play_sound(snd_round1, 0, 0) // "Round 1"
 alarm[0] = 30;

@@ -98,20 +98,22 @@ if (global.single == true) {
 		// Checks that the action is performed for the randomly generated cue (keyboard control option)
 		if (global.double_cue == false) {
 			if (((keyboard_check(ds_list_find_value(global.round_actions, global.num)) and !keyboard_check(ds_list_find_value(global.round_actions, !global.num)))) or (scr_chkswipe(ds_list_find_value(global.round_actions, global.num))) ) {
-				if (global.p1correct = 0){// For multiplayer: makes sure the player only gets it correct once
+				if (global.p1correct == 0){// For multiplayer: makes sure the player only gets it correct once
 					global.p1correct = 1; // Sets the "correct" variable to be used by the player object(s)
 				}
 			}
 			else if ((keyboard_check(vk_anykey) and !keyboard_check(vk_shift) and !keyboard_check(vk_escape) and !keyboard_check(vk_enter)) or global.swipedown or global.swipeup or global.swiperight or global.swipeleft){
-				global.p1correct = 2;
-				global.swipedown = false;
-				global.swipeup = false;
-				global.swipeleft = false;
-				global.swiperight = false;
+				if (global.p1correct == 0) {
+					global.p1correct = 2;
+					global.swipedown = false;
+					global.swipeup = false;
+					global.swipeleft = false;
+					global.swiperight = false;
+				}
 			}
 			// Checks that the action is performed for the randomly generated cue (gamepad control option)
-			if ((gamepad_button_check_pressed(0,ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, global.num))) and !gamepad_button_check_pressed(0,ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, !global.num)))) or (scr_chkstick(ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, global.num))))) {
-				if (global.p2correct = 0){// For multiplayer: makes sure the player only gets it correct once
+			if ((gamepad_button_check_pressed(0,ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, global.num)))) and !gamepad_button_check_pressed(0,ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, !global.num))) or (scr_chkstick(ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, global.num))))) {
+				if (global.p2correct == 0){// For multiplayer: makes sure the player only gets it correct once
 					global.p2correct = 1; // Sets the "correct" variable to be used by the player object(s)
 				}
 			}
@@ -124,17 +126,19 @@ if (global.single == true) {
 			(gamepad_axis_value(0, gp_axislv) < -.7) or 
 			(gamepad_axis_value(0, gp_axislh) < -.7) or 
 			(gamepad_axis_value(0, gp_axislh) > .7)){
-				global.p2correct = 2;
+				if (global.p2correct == 0) {
+					global.p2correct = 2;
+				}
 			}
 		}else{
 			if (((keyboard_check(ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, global.num))) and !keyboard_check(ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, !global.num))))) or (scr_chkswipe(ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, global.num)))) ) {
-				if (global.p1correct = 0){// For multiplayer: makes sure the player only gets it correct once
+				if (global.p1correct == 0){// For multiplayer: makes sure the player only gets it correct once
 					global.p1correct = 1; // Sets the "correct" variable to be used by the player object(s)
 				}
 			}
 			// Checks that the action is performed for the randomly generated cue (gamepad control option)
 			if (((gamepad_button_check_pressed(0,ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, global.num))) and !gamepad_button_check_pressed(0,ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, !global.num))))) or (scr_chkstick(ds_map_find_value(global.p1mapping, ds_list_find_value(global.round_actions, global.num))))) {
-				if (global.p2correct = 0){// For multiplayer: makes sure the player only gets it correct once
+				if (global.p2correct == 0){// For multiplayer: makes sure the player only gets it correct once
 					global.p2correct = 1; // Sets the "correct" variable to be used by the player object(s)
 				}
 			}

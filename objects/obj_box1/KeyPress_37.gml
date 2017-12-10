@@ -6,5 +6,9 @@ if (obj_options.curr_track > 0 and global.music_options ) {
 	obj_options.curr_track -=1;
 	// plays the sound of the option just switched to
 	audio_pause_all();
-	audio_play_sound(snd_none, 0, 0)
+	if (obj_options.curr_track == obj_options.tracknum.none) {
+		audio_play_sound(snd_none, 0, 0)
+	} else if (obj_options.curr_track == obj_options.tracknum.track1) {
+		audio_play_sound(snd_track1, 0, 0)
+	}
 }

@@ -2,7 +2,8 @@
 // The box selector objects allow for the curr variables to switch between the different constant "settings"
 enum tracknum { 
 	none,
-	track1
+	track1,
+	track2
 }
 
 enum soundpack {

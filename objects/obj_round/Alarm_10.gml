@@ -1,11 +1,22 @@
 ///@description Round Introduction start
-
+if (global.multi) {
+	if (instance_exists(obj_track1)) {
+		instance_destroy(obj_track1, noone);
+	}
+}
 	global.chesney = false;
 
 	global.healths = global.maxhealths;
 	cuenum = 0;
 
 global.roundnum +=1;
+if (global.multi) {
+	if (global.roundnum == 2) {
+		last_round = true;
+	} else if (global.roundnum == 3) {
+		global.gamebeat = true;
+	}
+}
 
 	if (ds_list_size(global.unused_cues) == 0 or ds_list_size(global.unused_actions2) == 0) {
 		last_round = true;

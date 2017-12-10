@@ -17,6 +17,11 @@ mpos = 0;
 
 time_options = 60;
 
+audio_pause_all();
+
+audio_play_sound(snd_selected, 0, 0);
+alarm[0] = 30;
+
 // option variables
 
 global.easy = false;

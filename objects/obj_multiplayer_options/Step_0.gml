@@ -5,7 +5,6 @@ if (keyboard_check(vk_escape)) {
 
 if (time_options <= 0) {	
 	audio_play_sound(snd_single_difficultyoptions, 0, 0); // introduces the room and gives instructions
-	alarm[1] = 180;
 	time_options += 400;
 }
 time_options -= 1;

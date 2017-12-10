@@ -1,5 +1,5 @@
 /// @description Step through the menu.
-if (time_options <= 0) {	
+if (time_options <= 0 and !instance_exists(obj_help)) {	
 	audio_play_sound(snd_pause_menu, 0, 0);
 	time_options += 400;
 }

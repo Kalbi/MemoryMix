@@ -5,7 +5,7 @@ switch(mpos) {
 		audio_pause_all();
 		global.single = true;
 		global.multi = false;
-		room_goto(Multiplayer_Instructions);
+		room_goto(Single_player_Instructions);
 		break;
 	}
 	

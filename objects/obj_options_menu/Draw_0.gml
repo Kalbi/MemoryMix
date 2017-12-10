@@ -3,10 +3,11 @@ draw_set_font(fnt_title);
 // Music
 draw_text(400, 270, "None")
 draw_text(575, 270, "Track 1")
+draw_text(775, 270, "Track 2")
 // Soundpack
 draw_text(400, 370, "Animals")
 draw_text(600, 370, "Music")
-draw_text(800, 370, "City")
+draw_text(780, 370, "Tranport")
 // Controls
 draw_set_font(fnt_title);
 draw_text(400, 470, "Keyboard")

@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "02d9afdd-05b2-472e-8c4d-1036a2b5a229",
+            "Value": {
+                "id": "64ca0a99-2ad2-40d9-9693-e4192201397a",
+                "resourcePath": "sounds\\snd_p1win1\\snd_p1win1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "02e18eb3-51fa-4e0e-8568-58b6447b9419",
             "Value": {
                 "id": "df84aec7-12a5-4db8-9d86-3885bc6291a7",
@@ -92,6 +100,14 @@
                 "id": "578e5381-9627-4687-9760-10d446e1abe9",
                 "resourcePath": "sprites\/sprt_lbox\/sprt_lbox.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "04705208-f878-449b-ada1-fd280549f0ef",
+            "Value": {
+                "id": "0f550500-5d74-4b17-8239-a71c937be070",
+                "resourcePath": "sounds\\snd_p2win1\\snd_p2win1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -260,6 +276,14 @@
                 "id": "4cb30e5f-44d0-42da-9cc3-aa52bf4404fa",
                 "resourcePath": "views\/1932d28a-2ce3-4ec2-b3e7-81f5fa85fa08.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "196c0b6e-b6a1-4825-82db-249ef35b3905",
+            "Value": {
+                "id": "b38ca5b8-fbab-47c3-b86d-3de04cb87e35",
+                "resourcePath": "sounds\\snd_player1\\snd_player1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -491,6 +515,14 @@
             "Value": {
                 "id": "f033a2c3-03c8-42ba-a701-4e964b30a10f",
                 "resourcePath": "sounds\/snd_ani_bee\/snd_ani_bee.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "31173674-2f28-46ce-adac-87a12400e977",
+            "Value": {
+                "id": "1abe11e5-26b8-4c48-8651-2d32a5ac3052",
+                "resourcePath": "sounds\\snd_player2\\snd_player2.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -1775,6 +1807,14 @@
             }
         },
         {
+            "Key": "a6d81e86-c748-4c12-9dff-1bbe0ea6980b",
+            "Value": {
+                "id": "c61f81cf-048f-457b-8000-21323a988fab",
+                "resourcePath": "sounds\\snd_p2win2\\snd_p2win2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "a6ff1d0e-87c4-4b62-bd82-1833595c8d8b",
             "Value": {
                 "id": "4b0cbdfb-5427-4c38-93a5-efcf3a9b25f0",
@@ -1795,6 +1835,14 @@
             "Value": {
                 "id": "01f45003-ac85-4300-ad04-106b44dab5f3",
                 "resourcePath": "sounds\\snd_round9\\snd_round9.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "a775c747-2bcf-4ef7-8b03-b48e7a6ea979",
+            "Value": {
+                "id": "367132c9-05d8-426f-8546-f65563201720",
+                "resourcePath": "sounds\\snd_tie1\\snd_tie1.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -2231,6 +2279,14 @@
             }
         },
         {
+            "Key": "ca3372fb-20bb-4b50-96c7-41c83ca2b0de",
+            "Value": {
+                "id": "b356dce0-f7b3-4543-b71e-5be485e870fd",
+                "resourcePath": "sounds\\snd_p1win2\\snd_p1win2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "cbb1248a-e672-47c5-babe-58a854b0eac0",
             "Value": {
                 "id": "79f8ac25-f277-453f-a828-53877c611411",
@@ -2324,6 +2380,14 @@
                 "id": "c9682b74-d9f3-4daf-8b5a-0a92da440b29",
                 "resourcePath": "views\/d0c4e0ab-d531-446e-85ce-356d3960983d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d157b641-5b8b-432c-9b10-033a4ab46fe7",
+            "Value": {
+                "id": "3d7b1532-cda3-4d39-909f-8bffa282a406",
+                "resourcePath": "rooms\\Single_player_Instructions\\Single_player_Instructions.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -2970,9 +3034,9 @@
     "script_order": [
         "be64b56e-8337-4438-820a-91bd0c5e24c6",
         "cd22980e-3cc1-4c78-9b83-81e8056c1616",
-        "1442e392-1a7d-4151-a57b-5232d3415689",
         "570e17e1-7930-498e-b956-2d0244e82976",
         "5def9f16-5a4a-4d94-bc08-ea5f631699ee",
+        "1442e392-1a7d-4151-a57b-5232d3415689",
         "94dc0cf5-163a-4330-9f88-bb7f32fafd66"
     ],
     "tutorial": ""

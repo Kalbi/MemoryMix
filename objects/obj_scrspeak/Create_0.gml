@@ -1,5 +1,13 @@
 // sets the variables that are read out at the end of each round for the score
-number = global.thescore;
+if (global.single) {
+	number = global.thescore;
+} else if (global.multi) {
+	if (global.read1) {
+		number = global.p1score;
+	} else if (global.read2) {
+		number = global.p2score;
+	}
+}
 global.thousands = 0;
 global.hundreds = 0;
 global.tens = 0;

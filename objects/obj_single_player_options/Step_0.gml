@@ -5,7 +5,6 @@ if (keyboard_check(vk_escape)) {
 }
 if (time_options <= 0) {	
 	audio_play_sound(snd_single_difficultyoptions, 0, 0); // introduces the room and gives instructions
-	alarm[1] = 180;
 	time_options += 400;
 }
 time_options -= 1;
@@ -33,6 +32,7 @@ if (move != 0) {
 	}
 	case 1: { //sp options
 		show_debug_message("case 0");
+		stop = true;
 		audio_pause_all();
 		audio_play_sound(snd_easy, 0, 0);
 		time_options = 200;
@@ -40,6 +40,7 @@ if (move != 0) {
 	}
 	case 2: { //mp options
 		show_debug_message("case 1");
+		stop = true
 		audio_pause_all();
 		audio_play_sound(snd_medium, 0, 0);
 		time_options = 200;
@@ -47,6 +48,7 @@ if (move != 0) {
 	}
 	case 3: { //options
 		audio_pause_all();
+		stop = true
 		audio_play_sound(snd_hard, 0, 0);
 		time_options = 200;
 		break;

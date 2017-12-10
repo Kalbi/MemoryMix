@@ -3,3 +3,5 @@
 instance_deactivate_all(true);
 audio_play_sound(snd_roundcompleted, 0, 0);
 alarm[0] = 45;
+
+
