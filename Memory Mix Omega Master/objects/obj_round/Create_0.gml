@@ -27,10 +27,10 @@ global.c = 0; // Counts how many round cues are in use
 global.b = 0;
 
 cuenum = 0; // Tracks how many cues have been generated in the current round
-
+onemore = false;
 last_round = false;
 secondtolast_round = false;
-
+global.notbeat = false;
 font = fnt_big;
 player = 1;
 

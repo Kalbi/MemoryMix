@@ -47,6 +47,7 @@ if (global.single == true) {
 					global.p1correct = 1;	
 				}else if (global.chesney == true) {
 					global.p1correct = 1;
+					global.p2correct = 1;
 				}
 			}
 			// Checks that the action is performed for the randomly generated cue (gamepad control option)
@@ -78,9 +79,44 @@ if (global.single == true) {
 				if (global.p2correct = 0){// For multiplayer: makes sure the player only gets it correct once
 					global.p2correct = 1; // Sets the "correct" variable to be used by the player object(s)
 				}
-			}else if (global.starpower == true) {
-				global.p2correct = 1;
-				global.free_num -= 1;
+			}else if (global.single) {
+				if (global.starpower == true) {
+					show_debug_message("starpower");
+					if (obj_player.num_stars == 3 and global.free_num == 3){
+						if (inst_star1){
+							with (inst_star1){
+								instance_destroy();
+								obj_player.num_stars -=1;
+							}
+						}
+				}else if (obj_player.num_stars == 2 and global.free_num == 3) {
+					show_debug_message("should destroy 2");
+					if (inst_star2){
+						with (inst_star2){
+							instance_destroy();
+							obj_player.num_stars -=1;
+						}
+					}
+				}else if (obj_player.num_stars == 1 and global.free_num == 3) {
+					if (inst_star3){
+						with (inst_star3){
+							instance_destroy();
+							obj_player.num_stars -=1;
+						}
+					}
+				}
+
+					global.p1correct = 1;
+					global.p1correct2 = 1;
+					global.p2correct = 1;
+					global.p2correct2 = 1;
+					
+				}else if (global.chesney == true) {
+					global.p1correct = 1;
+					global.p1correct2 = 1;
+					global.p2correct = 1;
+					global.p2correct2 = 1;
+				}
 			}
 			if (global.num >= 9) {
 				if (keyboard_check(ds_list_find_value(global.round_actions2, global.num - 9))){

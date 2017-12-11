@@ -48,13 +48,14 @@ if(0 < number <= 19)
 }
 if (global.single) {
 	if (global.thescore == 0) {
-		audio_play_sound(snd_zero, 0, 0);
+		alarm[11] = 30;
 	}
 }else if (global.multi) {
 		if (global.p1score == 0 and global.read1 == true) {
-			audio_play_sound(snd_zero, 0, 0);
+			alarm[11] = 30;
+			
 		} else if (global.p2score == 0 and global.read2 == true) {
-			audio_play_sound(snd_zero, 0, 0);
+			alarm[11] = 30;
 		}
 }
 

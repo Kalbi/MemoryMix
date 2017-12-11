@@ -37,3 +37,6 @@ if (!instance_exists(obj_options)) {
 	instance_create_depth(10, 10, 0, obj_options);
 }
 
+if (obj_options.curr_actions == obj_options.actions.swipe) {
+	global.double_cue = false;
+}

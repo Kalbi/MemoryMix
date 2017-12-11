@@ -60,6 +60,7 @@ if (obj_options.curr_sound_pack == obj_options.soundpack.animals){
 	ds_list_add(global.unused_cues, sprt_monkey);
 	ds_list_add(global.unused_cues, sprt_mouse);
 	ds_list_add(global.unused_cues, sprt_pig);
+	ds_list_add(global.unused_cues, sprt_pigeons);
 	ds_list_add(global.unused_cues, sprt_rooster);
 	ds_list_add(global.unused_cues, sprt_sealion);
 	ds_list_add(global.unused_cues, sprt_sheep);
@@ -69,6 +70,7 @@ if (obj_options.curr_sound_pack == obj_options.soundpack.animals){
 }else if (obj_options.curr_sound_pack == obj_options.soundpack.instruments){
 	ds_list_add(global.unused_cues, sprt_clarinet);
 	ds_list_add(global.unused_cues, sprt_drum);
+	ds_list_add(global.unused_cues, sprt_electricguitar);	
 	ds_list_add(global.unused_cues, sprt_guitar);
 	ds_list_add(global.unused_cues, sprt_harp);
 	ds_list_add(global.unused_cues, sprt_piano);
@@ -76,17 +78,32 @@ if (obj_options.curr_sound_pack == obj_options.soundpack.animals){
 	ds_list_add(global.unused_cues, sprt_violin);
 	ds_list_add(global.unused_cues, sprt_oboe);
 	ds_list_add(global.unused_cues, sprt_cymbals);
+	ds_list_add(global.unused_cues, sprt_ukelele);
+	ds_list_add(global.unused_cues, sprt_harmonica);
+	ds_list_add(global.unused_cues, sprt_xylophone);
+	ds_list_add(global.unused_cues, sprt_panflute);
+	ds_list_add(global.unused_cues, sprt_recorder);
 // City sound pack used if selected in settings	
 }else{
 	ds_list_add(global.unused_cues, sprt_bike);
 	ds_list_add(global.unused_cues, sprt_carunlock);
 	ds_list_add(global.unused_cues, sprt_car);
-	ds_list_add(global.unused_cues, sprt_jackhammer);
-	ds_list_add(global.unused_cues, sprt_pigeons);
+	ds_list_add(global.unused_cues, sprt_boat);
+	ds_list_add(global.unused_cues, sprt_skateboard);
+	ds_list_add(global.unused_cues, sprt_choochoo);
+	ds_list_add(global.unused_cues, sprt_canoe);
+	ds_list_add(global.unused_cues, sprt_runner);
+	ds_list_add(global.unused_cues, sprt_bus);
 	ds_list_add(global.unused_cues, sprt_siren);
 	ds_list_add(global.unused_cues, sprt_subway);
 	ds_list_add(global.unused_cues, sprt_train);
 	ds_list_add(global.unused_cues, sprt_digger);
+	ds_list_add(global.unused_cues, sprt_ufo);
+	ds_list_add(global.unused_cues, sprt_airplane);
+	ds_list_add(global.unused_cues, sprt_helicopter);
+	ds_list_add(global.unused_cues, sprt_sub);
+	ds_list_add(global.unused_cues, sprt_idletruck);
+
 }
 ds_list_shuffle(global.unused_cues) //shuffle the cue sounds for randomization each new game.
 //cues_mapping maps the cues to their names (Ex: "the bird" is mapped to the bird sprite)
@@ -115,6 +132,7 @@ ds_map_add(global.cues_mapping, sprt_whale, snd_intro_whale);
 // Instrument sound pack
 ds_map_add(global.cues_mapping, sprt_clarinet, snd_intro_clarinet);
 ds_map_add(global.cues_mapping, sprt_drum, snd_intro_drums);
+ds_map_add(global.cues_mapping, sprt_electricguitar, snd_intro_guitar);
 ds_map_add(global.cues_mapping, sprt_guitar, snd_intro_guitar);
 ds_map_add(global.cues_mapping, sprt_harp, snd_intro_harp);
 ds_map_add(global.cues_mapping, sprt_piano, snd_intro_piano);
@@ -122,16 +140,32 @@ ds_map_add(global.cues_mapping, sprt_horn, snd_intro_horn);
 ds_map_add(global.cues_mapping, sprt_oboe, snd_intro_oboe);
 ds_map_add(global.cues_mapping, sprt_cymbals, snd_intro_cymbals);
 ds_map_add(global.cues_mapping, sprt_violin, snd_intro_violin);
+ds_map_add(global.cues_mapping, sprt_ukelele, snd_intro_guitar);
+ds_map_add(global.cues_mapping, sprt_harmonica, snd_intro_guitar);
+ds_map_add(global.cues_mapping, sprt_panflute, snd_intro_guitar);
+ds_map_add(global.cues_mapping, sprt_recorder, snd_intro_guitar);
+ds_map_add(global.cues_mapping, sprt_xylophone, snd_intro_guitar);
 // City sound pack
 ds_map_add(global.cues_mapping, sprt_bike, snd_intro_bikebell);
 ds_map_add(global.cues_mapping, sprt_carunlock, snd_intro_carunlock);
 ds_map_add(global.cues_mapping, sprt_car, snd_intro_carhonk);
-ds_map_add(global.cues_mapping, sprt_jackhammer, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_runner, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_canoe, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_idletruck, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_helicopter, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_airplane, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_rocket, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_bus, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_boat, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_ufo, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_skateboard, snd_intro_jackhammer);
+ds_map_add(global.cues_mapping, sprt_choochoo, snd_intro_jackhammer);
 ds_map_add(global.cues_mapping, sprt_pigeons, snd_intro_pigeons);
 ds_map_add(global.cues_mapping, sprt_siren, snd_intro_siren);
 ds_map_add(global.cues_mapping, sprt_subway, snd_intro_subway);
 ds_map_add(global.cues_mapping, sprt_train, snd_intro_trainbells);
 ds_map_add(global.cues_mapping, sprt_digger, snd_intro_truckreversing);
+ds_map_add(global.cues_mapping, sprt_sub, snd_intro_truckreversing);
 //cue_sounds maps the cues to their sounds (Ex: a tweeting bird sound is mapped to the bird sprite)
 global.cue_sounds = ds_map_create();
 // Animal sound pack
@@ -150,6 +184,7 @@ ds_map_add(global.cue_sounds, sprt_lion, snd_ani_lion);
 ds_map_add(global.cue_sounds, sprt_monkey, snd_monkey);
 ds_map_add(global.cue_sounds, sprt_mouse, snd_mouse);
 ds_map_add(global.cue_sounds, sprt_pig, snd_ani_pig);
+ds_map_add(global.cue_sounds, sprt_pigeons, snd_cty_pigeons);
 ds_map_add(global.cue_sounds, sprt_rooster, snd_ani_rooster);
 ds_map_add(global.cue_sounds, sprt_sealion, snd_sealion);
 ds_map_add(global.cue_sounds, sprt_sheep, snd_ani_sheep);
@@ -159,22 +194,38 @@ ds_map_add(global.cue_sounds, sprt_whale, snd_whale);
 ds_map_add(global.cue_sounds, sprt_clarinet, snd_ins_clarinet);
 ds_map_add(global.cue_sounds, sprt_drum, snd_ins_drums);
 ds_map_add(global.cue_sounds, sprt_guitar, snd_ins_guitar);
+ds_map_add(global.cue_sounds, sprt_electricguitar, snd_ins_guitar);
 ds_map_add(global.cue_sounds, sprt_harp, snd_ins_harp);
 ds_map_add(global.cue_sounds, sprt_piano, snd_ins_piano);
 ds_map_add(global.cue_sounds, sprt_horn, snd_ins_horn);
 ds_map_add(global.cue_sounds, sprt_violin, snd_ins_violin);
 ds_map_add(global.cue_sounds, sprt_cymbals, snd_ins_cymbals);
 ds_map_add(global.cue_sounds, sprt_oboe, snd_ins_oboe);
+ds_map_add(global.cue_sounds, sprt_ukelele, snd_ukelele);
+ds_map_add(global.cue_sounds, sprt_harmonica, snd_harmonica);
+ds_map_add(global.cue_sounds, sprt_xylophone, snd_xylophone);
+ds_map_add(global.cue_sounds, sprt_panflute, snd_panflute);
+ds_map_add(global.cue_sounds, sprt_recorder, snd_recorder);
 // City sound pack
 ds_map_add(global.cue_sounds, sprt_bike, snd_cty_bikebell);
 ds_map_add(global.cue_sounds, sprt_carunlock, snd_cty_carunlock);
 ds_map_add(global.cue_sounds, sprt_car, snd_cty_honk);
-ds_map_add(global.cue_sounds, sprt_jackhammer, snd_cty_jackhammer);
-ds_map_add(global.cue_sounds, sprt_pigeons, snd_cty_pigeons);
+ds_map_add(global.cue_sounds, sprt_runner, snd_runner);
 ds_map_add(global.cue_sounds, sprt_siren, snd_cty_siren);
 ds_map_add(global.cue_sounds, sprt_subway, snd_cty_subway);
+ds_map_add(global.cue_sounds, sprt_idletruck, snd_cty_diesel);
 ds_map_add(global.cue_sounds, sprt_train, snd_cty_train);
 ds_map_add(global.cue_sounds, sprt_digger, snd_cty_truck);
+ds_map_add(global.cue_sounds, sprt_bus, snd_cty_children);
+ds_map_add(global.cue_sounds, sprt_ufo, snd_ufo);
+ds_map_add(global.cue_sounds, sprt_rocket, snd_rocket);
+ds_map_add(global.cue_sounds, sprt_choochoo, snd_choochoo);
+ds_map_add(global.cue_sounds, sprt_airplane, snd_plane);
+ds_map_add(global.cue_sounds, sprt_canoe, snd_canoe);
+ds_map_add(global.cue_sounds, sprt_skateboard, snd_skateboard);
+ds_map_add(global.cue_sounds, sprt_helicopter, snd_helicopter);
+ds_map_add(global.cue_sounds, sprt_boat, snd_boat);
+ds_map_add(global.cue_sounds, sprt_sub, snd_sub);
 //ACTIONS (What the player must to do earn points)
 //unused_actions list stores "waiting" action cues waiting to be associated with cues
 // as the rounds progress

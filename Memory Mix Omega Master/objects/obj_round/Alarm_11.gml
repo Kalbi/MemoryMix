@@ -11,4 +11,6 @@ if (global.roundnum ==1) {
 // Plays the music track if selected in options
 if (obj_options.curr_track == obj_options.tracknum.track1){
 	instance_create_depth(10, 10, 0, obj_track1);
+} else if (obj_options.curr_track == obj_options.tracknum.track2) {
+	instance_create_depth(10, 10, 0, obj_track2);
 }

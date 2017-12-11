@@ -27,7 +27,4 @@ draw_set_font(fnt_title);
 	draw_text(750, 700, "Player 2");
 	draw_text(100, 200, "Score: " +string(global.p1score));
 	draw_text(750, 200, "Score: " +string(global.p2score));
-	
-	draw_text(100, 600, "last_round is " +string(last_round));
-	//draw_text(100, 700, "Player is " +string(player));
 }	

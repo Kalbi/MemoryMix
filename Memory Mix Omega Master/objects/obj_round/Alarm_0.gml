@@ -1,7 +1,10 @@
 /// @description Adds cues and "When you hear"
 
 	// Introduces new cue sounds and their actions to the player
-if (ds_list_size(global.unused_cues) == 0 or ds_list_size(global.unused_actions2) == 0 or (global.multi == true and global.roundnum == 5)) {
+
+if (ds_list_size(global.unused_cues) == 0 and (obj_options.curr_actions == obj_options.actions.swipe) 
+	or ds_list_size(global.unused_actions2) == 0 
+	or (global.multi == true and global.roundnum == 5)) {
 	alarm[11] = 2;
 	last_round = true;
 } else {
@@ -16,7 +19,7 @@ double = true;
 		
 	} 
 		
-	if(ds_list_size(global.unused_actions) == 0) {
+	if(ds_list_size(global.unused_actions) == 0 and (obj_options.curr_actions == obj_options.actions.both or obj_options.curr_actions == obj_options.actions.keys)) {
 		global.double_cue = true;
 	}
 	if (global.double_cue == false and ds_list_size(global.unused_actions)>= 1) {	
