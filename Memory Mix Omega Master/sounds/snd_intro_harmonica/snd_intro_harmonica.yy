@@ -1,8 +1,8 @@
 {
-    "id": "c2f082ad-52d8-4b3c-894a-85d4c63364f0",
+    "id": "1e80a6ad-b2f0-40a4-b296-5fc5844ae2a0",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "sound235",
+    "name": "snd_intro_harmonica",
     "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,

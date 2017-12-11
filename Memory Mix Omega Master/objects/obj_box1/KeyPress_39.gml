@@ -7,8 +7,9 @@ if (obj_options.curr_track < 2 and global.music_options){
 	// plays the sound of the option just switched to
 	audio_pause_all();
 	if (obj_options.curr_track == obj_options.tracknum.track2) {
-		audio_play_sound(snd_correct, 0, 0)
+		audio_play_sound(snd_track2, 0, 0);
+		alarm[0] = 60;
 	} else if (obj_options.curr_track == obj_options.tracknum.track1) {
-		audio_play_sound(snd_track1, 0, 0)
+		audio_play_sound(mus_track1, 0, 0);
 	}
 }

@@ -5,7 +5,7 @@ global.cue_cooldown -= 1;
 if (obj_options.curr_actions == obj_options.actions.both){
 	if (global.gameover == false and global.gamebeat == false) {
 
-		if (global.cue_cooldown < 0 and global.collide == (global.roundnum) and cuenum < 3) {
+		if (global.cue_cooldown < 0 and global.collide == (global.roundnum) and cuenum < 7) {
 			global.num = irandom_range(0, ds_list_size(global.round_cues) - 1); 
 			instance_create_layer(512, 384, "Instances", obj_cue);
 			global.cue_cooldown += 150;
@@ -17,7 +17,7 @@ if (obj_options.curr_actions == obj_options.actions.both){
 			}
 		}
 
-		if (cuenum == 2) {
+		if (cuenum == 6) {
 
 			if (global.single){
 				alarm[6] = 152;
@@ -29,7 +29,7 @@ if (obj_options.curr_actions == obj_options.actions.both){
 	}
 }else if (obj_options.curr_actions == obj_options.actions.swipe){
 	
-		if (global.cue_cooldown < 0 and global.collide == (global.roundnum) and cuenum < 3) {
+		if (global.cue_cooldown < 0 and global.collide == (global.roundnum) and cuenum < 7) {
 			global.num = irandom_range(0, ds_list_size(global.round_cues) - 1); 
 			instance_create_layer(512, 384, "Instances" , obj_cue);
 			global.cue_cooldown += 150;
@@ -42,7 +42,7 @@ if (obj_options.curr_actions == obj_options.actions.both){
 			room_goto(Title_screen)
 		}
 
-		if (cuenum == 2) {
+		if (cuenum == 6) {
 
 			if (global.single){
 				alarm[6] = 152;
@@ -54,7 +54,7 @@ if (obj_options.curr_actions == obj_options.actions.both){
 		}
 	}
 
-		if (global.cue_cooldown < 0 and global.collide == (global.roundnum)and cuenum < 3) {
+		if (global.cue_cooldown < 0 and global.collide == (global.roundnum)and cuenum < 7) {
 			global.num = irandom_range(0, ds_list_size(global.round_cues) - 1); 
 			instance_create_layer(512, 384, "Instances" , obj_cue);
 			global.cue_cooldown += 150;
@@ -67,7 +67,7 @@ if (obj_options.curr_actions == obj_options.actions.both){
 			room_goto(Title_screen)
 		}
 
-		if (cuenum == 2) {
+		if (cuenum == 6) {
 
 			if (global.single){
 				alarm[6] = 152;

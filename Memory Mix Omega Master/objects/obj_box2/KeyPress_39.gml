@@ -6,7 +6,7 @@ if (obj_options.curr_sound_pack < 2 and global.sound_pack){
 	obj_options.curr_sound_pack+=1;
 	if (obj_options.curr_sound_pack == obj_options.soundpack.city) {
 		audio_pause_all();
-		audio_play_sound(snd_city, 0, 0);
+		audio_play_sound(snd_transport, 0, 0);
 	}else if (obj_options.curr_sound_pack == obj_options.soundpack.instruments) {
 		audio_pause_all();
 		audio_play_sound(snd_instruments, 0, 0);
