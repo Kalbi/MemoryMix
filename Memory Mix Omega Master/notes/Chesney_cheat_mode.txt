@@ -1,0 +1,4 @@
+"Chesney" cheat mode makes the player invincible for the remainder of a round (single player mode only).
+It can be used an unlimited number of times. 
+To activate "Chesney" mode, a player playing on a keyboard would have to press the "D" and "C" keys on the keyboard. 
+A player on a gamepad would have to press both the left and right triggers to activate "Chesney" mode.
